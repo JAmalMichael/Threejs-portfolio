@@ -14,9 +14,7 @@ const Target = (props) => {
   });
   const targetRef = useRef();
 
-  const { scene } = useGLTF(
-    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf"
-  );
+  const { scene } = useGLTF.preload("/models/desk.glb");
 
   return (
     <mesh {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]} scale={1.5}>
